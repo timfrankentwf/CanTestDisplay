@@ -5,12 +5,12 @@
 #include <QCanBus>
 #include <QProcess>
 #include "process.h"
-#include "wiringPi.h"
+//#include "wiringPi.h"
 
 void ISR(void)
 {
     qDebug("ISR triggered");
-    delay(1000);
+    //delay(1000);
 }
 
 int main(int argc, char *argv[])
@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<Process>("Process", 1, 0, "Process");
 
 
-    wiringPiSetupGpio();
-    wiringPiISR(25,INT_EDGE_FALLING,&ISR);
+    //wiringPiSetupGpio();
+    //wiringPiISR(25,INT_EDGE_FALLING,&ISR);
 
 
     if (QCanBus::instance()->plugins().contains(QStringLiteral("socketcan"))) {
