@@ -33,7 +33,7 @@ Item {
         height: parent.height
 
         header: Label {
-            text: qsTr("GPS Navigation | Breda NEW")
+            text: qsTr("GPS Navigation | <b>Build on Avans</b>")
             font.pixelSize: Qt.application.font.pixelSize
             padding: 10
             color: "#00d2be"
